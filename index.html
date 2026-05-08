@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Znar F. Edo | Medical Education Platform</title>
+<title>Znar F. Edo | Medical Education Platform – Nutrition Science</title>
+<meta name="keywords" content="obesity, السمنة, BMI, nutrition science, medical education, weight management, Znar F. Edo">
 
 <meta name="description" content="Znar F. Edo is a modern medical educational platform providing scientific medical information, nutrition knowledge, laboratory analysis education, fitness guidance, and healthy lifestyle awareness.">
 
@@ -348,6 +349,319 @@ transform:translateY(0px);
 
 }
 
+/* ===== NUTRITION SCIENCE / ARTICLE STYLES ===== */
+
+#nutrition{
+background:transparent;
+}
+
+.nutrition-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.nutrition-header .badge{
+display:inline-block;
+padding:6px 18px;
+border-radius:30px;
+background:linear-gradient(135deg,var(--main),var(--main2));
+color:white;
+font-size:13px;
+font-weight:600;
+letter-spacing:1px;
+margin-bottom:15px;
+}
+
+.article-card{
+max-width:900px;
+margin:0 auto;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:28px;
+backdrop-filter:blur(16px);
+box-shadow:var(--shadow);
+overflow:hidden;
+}
+
+.article-cover{
+width:100%;
+height:320px;
+object-fit:cover;
+display:block;
+}
+
+.article-body{
+padding:45px;
+}
+
+.article-tag{
+display:inline-block;
+padding:5px 14px;
+border-radius:20px;
+background:rgba(60,197,255,0.15);
+border:1px solid rgba(60,197,255,0.3);
+color:var(--main2);
+font-size:12px;
+font-weight:600;
+letter-spacing:0.5px;
+margin-bottom:18px;
+}
+
+.article-title-main{
+font-size:38px;
+font-weight:700;
+line-height:1.2;
+margin-bottom:12px;
+background:linear-gradient(to right,var(--main),var(--main2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.article-meta{
+color:var(--sub);
+font-size:14px;
+margin-bottom:28px;
+padding-bottom:28px;
+border-bottom:1px solid var(--border);
+}
+
+.article-intro-text{
+font-size:17px;
+line-height:1.9;
+color:var(--sub);
+margin-bottom:32px;
+}
+
+.article-body h2{
+font-size:22px;
+font-weight:600;
+color:var(--main2);
+margin:35px 0 12px;
+padding-bottom:8px;
+border-bottom:1px solid var(--border);
+}
+
+.article-body h3{
+font-size:17px;
+font-weight:600;
+color:var(--text);
+margin:22px 0 8px;
+padding-left:12px;
+border-left:3px solid var(--main);
+}
+
+.article-body p{
+color:var(--sub);
+line-height:1.85;
+margin-bottom:14px;
+}
+
+.article-body ul{
+list-style:none;
+padding:0;
+margin:10px 0 20px;
+}
+
+.article-body ul li{
+color:var(--sub);
+padding:7px 0 7px 24px;
+position:relative;
+border-bottom:1px solid var(--border);
+line-height:1.7;
+}
+
+.article-body ul li::before{
+content:"→";
+position:absolute;
+left:0;
+color:var(--main);
+font-weight:700;
+}
+
+.bmi-box{
+background:linear-gradient(135deg,rgba(60,197,255,0.1),rgba(101,240,255,0.08));
+border:1px solid rgba(60,197,255,0.3);
+border-radius:16px;
+padding:24px 28px;
+margin:22px 0;
+}
+
+.bmi-box h3{
+border-left:none;
+padding-left:0;
+color:var(--main2);
+font-size:16px;
+margin-bottom:12px;
+}
+
+.bmi-formula{
+font-size:22px;
+font-weight:700;
+color:var(--text);
+text-align:center;
+padding:14px;
+background:rgba(0,0,0,0.2);
+border-radius:10px;
+letter-spacing:1px;
+}
+
+.bmi-formula sup{
+font-size:14px;
+}
+
+.bmi-table{
+width:100%;
+border-collapse:collapse;
+margin-top:16px;
+}
+
+.bmi-table th{
+background:rgba(60,197,255,0.15);
+color:var(--main2);
+padding:10px 16px;
+text-align:left;
+font-size:14px;
+font-weight:600;
+}
+
+.bmi-table td{
+padding:10px 16px;
+color:var(--sub);
+font-size:14px;
+border-bottom:1px solid var(--border);
+}
+
+.bmi-table tr:last-child td{
+border-bottom:none;
+}
+
+.arabic-block{
+direction:rtl;
+text-align:right;
+font-family:'Cairo','Poppins',sans-serif;
+background:rgba(255,255,255,0.03);
+border:1px solid var(--border);
+border-radius:14px;
+padding:22px 26px;
+margin:20px 0;
+}
+
+.arabic-block h4{
+color:var(--main2);
+margin-bottom:10px;
+font-size:16px;
+}
+
+.arabic-block p, .arabic-block li{
+color:var(--sub);
+font-size:15px;
+line-height:2;
+}
+
+.risk-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:14px;
+margin:16px 0;
+}
+
+.risk-item{
+background:rgba(255,255,255,0.04);
+border:1px solid var(--border);
+border-radius:12px;
+padding:16px;
+text-align:center;
+color:var(--sub);
+font-size:14px;
+transition:0.3s;
+}
+
+.risk-item:hover{
+transform:translateY(-4px);
+border-color:var(--main);
+color:var(--text);
+}
+
+.risk-item .risk-icon{
+font-size:26px;
+display:block;
+margin-bottom:8px;
+}
+
+.treatment-steps{
+counter-reset:step;
+list-style:none;
+padding:0;
+}
+
+.treatment-steps li{
+counter-increment:step;
+position:relative;
+padding:16px 16px 16px 55px;
+margin-bottom:12px;
+background:rgba(255,255,255,0.03);
+border-radius:12px;
+border:1px solid var(--border);
+color:var(--sub);
+line-height:1.7;
+}
+
+.treatment-steps li::before{
+content:counter(step);
+position:absolute;
+left:16px;
+top:50%;
+transform:translateY(-50%);
+width:28px;
+height:28px;
+border-radius:50%;
+background:linear-gradient(135deg,var(--main),var(--main2));
+color:white;
+font-weight:700;
+font-size:13px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.conclusion-box{
+background:linear-gradient(135deg,rgba(60,197,255,0.08),rgba(101,240,255,0.05));
+border:1px solid rgba(60,197,255,0.25);
+border-radius:16px;
+padding:28px;
+margin:30px 0;
+}
+
+.conclusion-box p{
+color:var(--text);
+font-size:16px;
+line-height:1.9;
+margin:0;
+}
+
+.references-list{
+list-style:none;
+padding:0;
+}
+
+.references-list li{
+margin-bottom:10px;
+}
+
+.references-list a{
+color:var(--main);
+text-decoration:none;
+font-size:14px;
+transition:0.2s;
+}
+
+.references-list a:hover{
+color:var(--main2);
+text-decoration:underline;
+}
+
+/* ===== END ARTICLE STYLES ===== */
+
 @media(max-width:950px){
 
 .hero{
@@ -367,6 +681,22 @@ nav{
 display:none;
 }
 
+.article-title-main{
+font-size:28px;
+}
+
+.article-body{
+padding:28px 22px;
+}
+
+.article-cover{
+height:220px;
+}
+
+.risk-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
 }
 
 </style>
@@ -381,6 +711,7 @@ display:none;
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
+<a href="#nutrition" id="nutr-nav">Nutrition Science</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -476,6 +807,186 @@ I am a Medical Laboratory Analysis student at Cihan University with experience i
 
 </section>
 
+<!-- ===== NUTRITION SCIENCE SECTION ===== -->
+<section id="nutrition">
+
+<div class="nutrition-header">
+  <div class="badge" id="nutr-badge">🥗 NUTRITION SCIENCE</div>
+  <h2 class="section-title" id="nutr-title">Scientific <span>Articles</span></h2>
+  <p style="color:var(--sub);max-width:600px;margin:0 auto;" id="nutr-sub">Evidence-based medical content on nutrition, metabolism, and clinical dietetics.</p>
+</div>
+
+<!-- OBESITY ARTICLE CARD -->
+<article class="article-card" itemscope itemtype="https://schema.org/MedicalWebPage">
+
+  <img
+    class="article-cover"
+    src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop"
+    alt="Healthy nutrition and obesity management – Znar F. Edo"
+    loading="lazy"
+  >
+
+  <div class="article-body">
+
+    <span class="article-tag" id="nutr-tag">📋 Nutrition &amp; Metabolism</span>
+
+    <h1 class="article-title-main" itemprop="name">Obesity (السمنة)</h1>
+
+    <p class="article-meta" id="nutr-meta">
+      🗓 Published: May 2026 &nbsp;|&nbsp; ✍️ Znar F. Edo &nbsp;|&nbsp; 🌍 Bilingual Article (EN / AR)
+    </p>
+
+    <p class="article-intro-text" id="nutr-intro" itemprop="description">
+      Obesity is a chronic medical condition characterized by excessive accumulation of body fat to a degree that negatively affects health. It is associated with increased risk of metabolic disorders, cardiovascular diseases, type 2 diabetes, hypertension, and several forms of cancer. The World Health Organization classifies obesity as one of the most significant global health challenges.
+    </p>
+
+    <!-- Arabic Overview -->
+    <div class="arabic-block">
+      <h4>نظرة عامة — Overview</h4>
+      <p>السمنة هي حالة مرضية مزمنة تتميز بتراكم الدهون في الجسم بشكل مفرط إلى درجة تؤثر سلبًا على الصحة العامة. لا تُعد السمنة مشكلة شكلية فقط، بل ترتبط بارتفاع خطر الإصابة بالعديد من الأمراض المزمنة مثل السكري وأمراض القلب وارتفاع ضغط الدم وبعض أنواع السرطان.</p>
+    </div>
+
+    <!-- What is Obesity -->
+    <h2 id="h2-what">What is Obesity?</h2>
+    <p id="p-what">Obesity occurs when energy intake consistently exceeds energy expenditure over a prolonged period, leading to pathological fat accumulation in adipose tissues. Body Mass Index (BMI) is the standard clinical tool used to classify body weight in adults.</p>
+
+    <!-- BMI Box -->
+    <div class="bmi-box">
+      <h3 id="h3-bmi">📐 Body Mass Index (BMI) Formula</h3>
+      <div class="bmi-formula">BMI = Weight (kg) ÷ Height<sup>2</sup> (m²)</div>
+      <table class="bmi-table">
+        <thead>
+          <tr><th>BMI Range</th><th>Classification</th><th>التصنيف</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>&lt; 18.5</td><td>Underweight</td><td>نقص وزن</td></tr>
+          <tr><td>18.5 – 24.9</td><td>Normal Weight</td><td>وزن طبيعي</td></tr>
+          <tr><td>25 – 29.9</td><td>Overweight</td><td>زيادة وزن</td></tr>
+          <tr><td>30 – 39.9</td><td>Obesity</td><td>سمنة</td></tr>
+          <tr><td>≥ 40</td><td>Severe Obesity</td><td>سمنة مفرطة</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Is Obesity a Disease -->
+    <h2 id="h2-disease">Is Obesity a Disease?</h2>
+    <p id="p-disease">Yes. Obesity is recognized as a chronic, multifactorial disease resulting from complex interactions between genetic, hormonal, dietary, behavioral, and environmental factors. It significantly affects metabolism and the function of multiple organ systems.</p>
+
+    <!-- Arabic block -->
+    <div class="arabic-block">
+      <h4>هل السمنة مرض؟</h4>
+      <p>نعم، تُعتبر السمنة مرضًا مزمنًا ومعقدًا ناتجًا عن تداخل عوامل وراثية وهرمونية وغذائية وسلوكية وبيئية. وقد تؤثر على عمليات الأيض (Metabolism) ووظائف أجهزة الجسم المختلفة.</p>
+    </div>
+
+    <!-- Causes -->
+    <h2 id="h2-causes">Main Causes of Obesity</h2>
+
+    <h3 id="h3-c1">1. Excessive Calorie Intake</h3>
+    <p id="p-c1">Consuming high-calorie foods — fast food, sugary beverages, refined carbohydrates, and saturated fats — leads to chronic positive energy balance and progressive fat storage.</p>
+
+    <h3 id="h3-c2">2. Physical Inactivity</h3>
+    <p id="p-c2">A sedentary lifestyle reduces total energy expenditure. Prolonged sitting and insufficient physical activity are key drivers of modern obesity.</p>
+
+    <h3 id="h3-c3">3. Genetic Factors</h3>
+    <p id="p-c3">Genes influence basal metabolic rate, appetite regulation, fat distribution, and insulin sensitivity. However, genetic predisposition interacts with lifestyle behaviors.</p>
+
+    <h3 id="h3-c4">4. Hormonal Disorders</h3>
+    <p id="p-c4">Endocrine disorders such as hypothyroidism, Cushing syndrome, and insulin resistance can promote significant weight gain.</p>
+
+    <h3 id="h3-c5">5. Sleep Deprivation</h3>
+    <p id="p-c5">Insufficient sleep disrupts the balance of <strong>Leptin</strong> (satiety hormone) and <strong>Ghrelin</strong> (hunger hormone), increasing appetite and cravings for high-calorie foods.</p>
+
+    <h3 id="h3-c6">6. Psychological Factors</h3>
+    <p id="p-c6">Chronic stress, anxiety, and depression may trigger emotional eating and elevate cortisol levels, which promotes abdominal fat accumulation.</p>
+
+    <h3 id="h3-c7">7. Medications</h3>
+    <p id="p-c7">Certain drugs including corticosteroids, some antidepressants, antipsychotics, and antidiabetic agents may contribute to weight gain as a side effect.</p>
+
+    <!-- Hormones Section -->
+    <h2 id="h2-hormones">Role of Hormones in Obesity</h2>
+    <p id="p-hormones">Hormones are central regulators of appetite, metabolism, and fat storage. Key hormones involved in obesity include:</p>
+    <ul id="ul-hormones">
+      <li><strong>Insulin</strong> — regulates blood glucose and promotes fat storage</li>
+      <li><strong>Leptin</strong> — signals satiety to the hypothalamus</li>
+      <li><strong>Ghrelin</strong> — stimulates hunger and appetite</li>
+      <li><strong>Cortisol</strong> — stress hormone that promotes visceral fat accumulation</li>
+      <li><strong>Thyroid Hormones</strong> — regulate basal metabolic rate</li>
+    </ul>
+
+    <!-- Health Risks -->
+    <h2 id="h2-risks">Health Risks of Obesity</h2>
+
+    <div class="risk-grid">
+      <div class="risk-item" id="risk-1"><span class="risk-icon">🩸</span>Type 2 Diabetes</div>
+      <div class="risk-item" id="risk-2"><span class="risk-icon">❤️</span>Heart Disease</div>
+      <div class="risk-item" id="risk-3"><span class="risk-icon">🫀</span>Hypertension</div>
+      <div class="risk-item" id="risk-4"><span class="risk-icon">🧪</span>Dyslipidemia</div>
+      <div class="risk-item" id="risk-5"><span class="risk-icon">🫁</span>Sleep Apnea</div>
+      <div class="risk-item" id="risk-6"><span class="risk-icon">🦴</span>Joint Disorders</div>
+      <div class="risk-item" id="risk-7"><span class="risk-icon">🧠</span>Depression &amp; Anxiety</div>
+      <div class="risk-item" id="risk-8"><span class="risk-icon">🏥</span>Fatty Liver Disease</div>
+    </div>
+
+    <!-- Treatment -->
+    <h2 id="h2-treat">Management &amp; Treatment</h2>
+
+    <ol class="treatment-steps" id="ol-treat">
+      <li><strong>Nutritional Therapy</strong> — Calorie-controlled diet with increased protein, fiber, vegetables, and reduced processed sugars and fats.</li>
+      <li><strong>Physical Exercise</strong> — Minimum 150 minutes/week of moderate aerobic activity plus resistance training to preserve lean muscle mass.</li>
+      <li><strong>Behavioral Modification</strong> — Stress management, improved sleep hygiene, and structured meal planning.</li>
+      <li><strong>Pharmacological Treatment</strong> — Medically supervised weight-loss medications where clinically indicated.</li>
+      <li><strong>Bariatric Surgery</strong> — Sleeve gastrectomy or gastric bypass for severe obesity (BMI ≥ 40 or ≥ 35 with comorbidities).</li>
+    </ol>
+
+    <!-- Arabic causes block -->
+    <div class="arabic-block">
+      <h4>أسباب السمنة — Causes of Obesity</h4>
+      <ul style="list-style:disc;padding-right:20px;">
+        <li>الإفراط في تناول الطعام والسعرات الزائدة</li>
+        <li>قلة النشاط البدني والجلوس لفترات طويلة</li>
+        <li>العوامل الوراثية والهرمونية</li>
+        <li>قلة النوم وتأثيرها على هرمونات الجوع والشبع</li>
+        <li>الضغط النفسي والتوتر والاكتئاب</li>
+        <li>بعض الأدوية (الكورتيزون، مضادات الاكتئاب)</li>
+      </ul>
+    </div>
+
+    <!-- Arabic treatment block -->
+    <div class="arabic-block">
+      <h4>كيف نعالج السمنة؟</h4>
+      <ul style="list-style:disc;padding-right:20px;">
+        <li>تعديل النظام الغذائي وتقليل السعرات</li>
+        <li>ممارسة الرياضة ١٥٠ دقيقة أسبوعيًا على الأقل</li>
+        <li>تحسين النوم وإدارة التوتر</li>
+        <li>العلاج الدوائي تحت إشراف طبي</li>
+        <li>العمليات الجراحية (تكميم المعدة / تحويل المسار) في الحالات الشديدة</li>
+      </ul>
+    </div>
+
+    <!-- Conclusion -->
+    <h2 id="h2-conclusion">Conclusion — الخلاصة</h2>
+    <div class="conclusion-box">
+      <p id="p-conclusion">Obesity is a multifactorial chronic disease driven by genetic, metabolic, hormonal, behavioral, and environmental factors. It is not merely a cosmetic concern but a serious medical condition associated with life-threatening comorbidities. Long-term management requires individualized lifestyle modification, evidence-based nutritional strategies, regular physical activity, and medical supervision when necessary.</p>
+    </div>
+
+    <div class="arabic-block">
+      <p>السمنة مرض مزمن ومعقد ينتج عن تفاعل عدة عوامل تشمل التغذية، النشاط البدني، الوراثة، الهرمونات والعوامل النفسية. الوقاية والعلاج يعتمدان على تعديل نمط الحياة، التغذية الصحية، النشاط البدني والمتابعة الطبية عند الحاجة.</p>
+    </div>
+
+    <!-- References -->
+    <h2 id="h2-refs">📚 References</h2>
+    <ul class="references-list">
+      <li>🔗 <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener">World Health Organization (WHO) — Obesity and Overweight</a></li>
+      <li>🔗 <a href="https://www.cdc.gov/obesity/index.html" target="_blank" rel="noopener">Centers for Disease Control and Prevention (CDC) — Obesity</a></li>
+      <li>🔗 <a href="https://www.niddk.nih.gov/health-information/weight-management" target="_blank" rel="noopener">National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)</a></li>
+    </ul>
+
+  </div><!-- end article-body -->
+</article>
+
+</section>
+<!-- ===== END NUTRITION SCIENCE ===== -->
+
 <section id="contact">
 
 <h2 class="section-title">
@@ -511,47 +1022,114 @@ Instagram
 <script>
 
 function toggleMode(){
-
-document.body.classList.toggle("light-mode");
-
+  document.body.classList.toggle("light-mode");
 }
 
 let arabic=false;
 
-function toggleLanguage(){
+/* ── Bilingual translations for Nutrition Science section ── */
+const T={
+en:{
+"nutr-nav":"Nutrition Science",
+"nutr-badge":"🥗 NUTRITION SCIENCE",
+"nutr-title":"Scientific <span>Articles</span>",
+"nutr-sub":"Evidence-based medical content on nutrition, metabolism, and clinical dietetics.",
+"nutr-tag":"📋 Nutrition &amp; Metabolism",
+"nutr-meta":"🗓 Published: May 2026 &nbsp;|&nbsp; ✍️ Znar F. Edo &nbsp;|&nbsp; 🌍 Bilingual Article (EN / AR)",
+"nutr-intro":"Obesity is a chronic medical condition characterized by excessive accumulation of body fat to a degree that negatively affects health. It is associated with increased risk of metabolic disorders, cardiovascular diseases, type 2 diabetes, hypertension, and several forms of cancer. The World Health Organization classifies obesity as one of the most significant global health challenges.",
+"h2-what":"What is Obesity?",
+"p-what":"Obesity occurs when energy intake consistently exceeds energy expenditure over a prolonged period, leading to pathological fat accumulation in adipose tissues. Body Mass Index (BMI) is the standard clinical tool used to classify body weight in adults.",
+"h3-bmi":"📐 Body Mass Index (BMI) Formula",
+"h2-disease":"Is Obesity a Disease?",
+"p-disease":"Yes. Obesity is recognized as a chronic, multifactorial disease resulting from complex interactions between genetic, hormonal, dietary, behavioral, and environmental factors. It significantly affects metabolism and the function of multiple organ systems.",
+"h2-causes":"Main Causes of Obesity",
+"h3-c1":"1. Excessive Calorie Intake","p-c1":"Consuming high-calorie foods — fast food, sugary beverages, refined carbohydrates, and saturated fats — leads to chronic positive energy balance and progressive fat storage.",
+"h3-c2":"2. Physical Inactivity","p-c2":"A sedentary lifestyle reduces total energy expenditure. Prolonged sitting and insufficient physical activity are key drivers of modern obesity.",
+"h3-c3":"3. Genetic Factors","p-c3":"Genes influence basal metabolic rate, appetite regulation, fat distribution, and insulin sensitivity. However, genetic predisposition interacts with lifestyle behaviors.",
+"h3-c4":"4. Hormonal Disorders","p-c4":"Endocrine disorders such as hypothyroidism, Cushing syndrome, and insulin resistance can promote significant weight gain.",
+"h3-c5":"5. Sleep Deprivation","p-c5":"Insufficient sleep disrupts the balance of <strong>Leptin</strong> (satiety hormone) and <strong>Ghrelin</strong> (hunger hormone), increasing appetite and cravings for high-calorie foods.",
+"h3-c6":"6. Psychological Factors","p-c6":"Chronic stress, anxiety, and depression may trigger emotional eating and elevate cortisol levels, which promotes abdominal fat accumulation.",
+"h3-c7":"7. Medications","p-c7":"Certain drugs including corticosteroids, some antidepressants, antipsychotics, and antidiabetic agents may contribute to weight gain as a side effect.",
+"h2-hormones":"Role of Hormones in Obesity",
+"p-hormones":"Hormones are central regulators of appetite, metabolism, and fat storage. Key hormones involved in obesity include:",
+"ul-hormones":"<li><strong>Insulin</strong> — regulates blood glucose and promotes fat storage</li><li><strong>Leptin</strong> — signals satiety to the hypothalamus</li><li><strong>Ghrelin</strong> — stimulates hunger and appetite</li><li><strong>Cortisol</strong> — stress hormone that promotes visceral fat accumulation</li><li><strong>Thyroid Hormones</strong> — regulate basal metabolic rate</li>",
+"h2-risks":"Health Risks of Obesity",
+"risk-1":"<span class=\"risk-icon\">🩸</span>Type 2 Diabetes","risk-2":"<span class=\"risk-icon\">❤️</span>Heart Disease",
+"risk-3":"<span class=\"risk-icon\">🫀</span>Hypertension","risk-4":"<span class=\"risk-icon\">🧪</span>Dyslipidemia",
+"risk-5":"<span class=\"risk-icon\">🫁</span>Sleep Apnea","risk-6":"<span class=\"risk-icon\">🦴</span>Joint Disorders",
+"risk-7":"<span class=\"risk-icon\">🧠</span>Depression &amp; Anxiety","risk-8":"<span class=\"risk-icon\">🏥</span>Fatty Liver Disease",
+"h2-treat":"Management &amp; Treatment",
+"ol-treat":"<li><strong>Nutritional Therapy</strong> — Calorie-controlled diet with increased protein, fiber, vegetables, and reduced processed sugars and fats.</li><li><strong>Physical Exercise</strong> — Minimum 150 minutes/week of moderate aerobic activity plus resistance training to preserve lean muscle mass.</li><li><strong>Behavioral Modification</strong> — Stress management, improved sleep hygiene, and structured meal planning.</li><li><strong>Pharmacological Treatment</strong> — Medically supervised weight-loss medications where clinically indicated.</li><li><strong>Bariatric Surgery</strong> — Sleeve gastrectomy or gastric bypass for severe obesity (BMI ≥ 40 or ≥ 35 with comorbidities).</li>",
+"h2-conclusion":"Conclusion — الخلاصة",
+"p-conclusion":"Obesity is a multifactorial chronic disease driven by genetic, metabolic, hormonal, behavioral, and environmental factors. It is not merely a cosmetic concern but a serious medical condition associated with life-threatening comorbidities. Long-term management requires individualized lifestyle modification, evidence-based nutritional strategies, regular physical activity, and medical supervision when necessary.",
+"h2-refs":"📚 References"
+},
+ar:{
+"nutr-nav":"علم التغذية",
+"nutr-badge":"🥗 علم التغذية",
+"nutr-title":"مقالات <span>علمية</span>",
+"nutr-sub":"محتوى طبي علمي في مجال التغذية والأيض والتغذية الإكلينيكية.",
+"nutr-tag":"📋 التغذية والأيض",
+"nutr-meta":"🗓 تاريخ النشر: مايو 2026 &nbsp;|&nbsp; ✍️ زنار ف. إيدو &nbsp;|&nbsp; 🌍 مقال ثنائي اللغة",
+"nutr-intro":"السمنة حالة مرضية مزمنة تتميز بتراكم مفرط للدهون يؤثر سلبًا على الصحة. ترتبط بأمراض الأيض وأمراض القلب والسكري من النوع الثاني وارتفاع ضغط الدم وبعض السرطانات. تُصنفها منظمة الصحة العالمية كأحد أهم التحديات الصحية عالميًا.",
+"h2-what":"ما هي السمنة؟",
+"p-what":"تحدث السمنة عندما تتجاوز السعرات الداخلة الطاقة المستهلكة لفترة طويلة مما يؤدي لتراكم الدهون في الأنسجة الدهنية. يُستخدم مؤشر كتلة الجسم (BMI) كأداة سريرية معيارية لتصنيف الوزن لدى البالغين.",
+"h3-bmi":"📐 معادلة مؤشر كتلة الجسم (BMI)",
+"h2-disease":"هل السمنة مرض؟",
+"p-disease":"نعم. السمنة مرض مزمن متعدد العوامل ناتج عن تفاعل معقد بين العوامل الوراثية والهرمونية والغذائية والسلوكية والبيئية. تؤثر بشكل كبير على الأيض ووظائف أجهزة الجسم المختلفة.",
+"h2-causes":"الأسباب الرئيسية للسمنة",
+"h3-c1":"١. الإفراط في السعرات الحرارية","p-c1":"تناول الأطعمة عالية السعرات كالوجبات السريعة والمشروبات السكرية والكربوهيدرات المكررة والدهون المشبعة يؤدي لتوازن طاقة إيجابي مزمن وتراكم تدريجي للدهون.",
+"h3-c2":"٢. قلة النشاط البدني","p-c2":"أسلوب الحياة الخامل يقلل إنفاق الطاقة. الجلوس لفترات طويلة وقلة الرياضة من أهم أسباب السمنة الحديثة.",
+"h3-c3":"٣. العوامل الوراثية","p-c3":"تؤثر الجينات على معدل الأيض وتنظيم الشهية وتوزيع الدهون وحساسية الأنسولين. غير أن الاستعداد الوراثي يتفاعل مع نمط الحياة.",
+"h3-c4":"٤. اضطرابات الهرمونات","p-c4":"اضطرابات الغدد الصماء كقصور الغدة الدرقية ومتلازمة كوشينغ ومقاومة الأنسولين قد تؤدي لزيادة وزن ملحوظة.",
+"h3-c5":"٥. قلة النوم","p-c5":"قلة النوم تخل بتوازن هرمون <strong>اللبتين</strong> (الشبع) وهرمون <strong>الجريلين</strong> (الجوع) مما يزيد الشهية والرغبة في الأطعمة عالية السعرات.",
+"h3-c6":"٦. العوامل النفسية","p-c6":"التوتر المزمن والقلق والاكتئاب قد تؤدي للأكل العاطفي وارتفاع الكورتيزول الذي يعزز تراكم الدهون البطنية.",
+"h3-c7":"٧. بعض الأدوية","p-c7":"أدوية كالكورتيكوستيرويدات ومضادات الاكتئاب ومضادات الذهان وأدوية السكري قد تسبب زيادة الوزن كأثر جانبي.",
+"h2-hormones":"دور الهرمونات في السمنة",
+"p-hormones":"الهرمونات هي المنظمات الرئيسية للشهية والأيض وتخزين الدهون. أبرز الهرمونات المرتبطة بالسمنة:",
+"ul-hormones":"<li><strong>الأنسولين</strong> — ينظم سكر الدم ويعزز تخزين الدهون</li><li><strong>اللبتين</strong> — يُرسل إشارات الشبع للمخ</li><li><strong>الجريلين</strong> — يُحفز الجوع والشهية</li><li><strong>الكورتيزول</strong> — هرمون التوتر ويعزز تراكم الدهون الحشوية</li><li><strong>هرمونات الغدة الدرقية</strong> — تنظم معدل الأيض الأساسي</li>",
+"h2-risks":"مخاطر السمنة الصحية",
+"risk-1":"<span class=\"risk-icon\">🩸</span>السكري النوع الثاني","risk-2":"<span class=\"risk-icon\">❤️</span>أمراض القلب",
+"risk-3":"<span class=\"risk-icon\">🫀</span>ارتفاع ضغط الدم","risk-4":"<span class=\"risk-icon\">🧪</span>اضطراب الدهون",
+"risk-5":"<span class=\"risk-icon\">🫁</span>انقطاع النفس النومي","risk-6":"<span class=\"risk-icon\">🦴</span>مشاكل المفاصل",
+"risk-7":"<span class=\"risk-icon\">🧠</span>الاكتئاب والقلق","risk-8":"<span class=\"risk-icon\">🏥</span>الكبد الدهني",
+"h2-treat":"العلاج والتدخل الطبي",
+"ol-treat":"<li><strong>العلاج الغذائي</strong> — نظام غذائي محكوم السعرات مع زيادة البروتين والألياف والخضروات وتقليل السكريات والدهون المصنعة.</li><li><strong>التمارين البدنية</strong> — ١٥٠ دقيقة أسبوعيًا على الأقل من النشاط المعتدل مع تمارين المقاومة.</li><li><strong>تعديل السلوك</strong> — إدارة التوتر وتحسين النوم وتنظيم وجبات الطعام.</li><li><strong>العلاج الدوائي</strong> — أدوية إنقاص الوزن تحت إشراف طبي حيث يُشار إليها سريريًا.</li><li><strong>الجراحة</strong> — تكميم المعدة أو تحويل مسار المعدة للسمنة الشديدة (BMI ≥ 40 أو ≥ 35 مع أمراض مصاحبة).</li>",
+"h2-conclusion":"الخلاصة",
+"p-conclusion":"السمنة مرض مزمن متعدد العوامل تشمل الوراثة والهرمونات والتغذية والسلوك والبيئة. ليست مشكلة جمالية بل حالة طبية خطيرة مرتبطة بأمراض مهددة للحياة. يتطلب العلاج تعديل نمط الحياة والتغذية السليمة والنشاط البدني والمتابعة الطبية عند الحاجة.",
+"h2-refs":"📚 المصادر"
+}};
 
-arabic=!arabic;
-
-if(arabic){
-
-document.documentElement.lang="ar";
-document.documentElement.dir="rtl";
-
-document.getElementById("title").innerHTML=
-"منصة <span>طبية حديثة</span> للجميع";
-
-document.getElementById("desc").innerHTML=
-"زد-ميدكس منصة طبية تعليمية حديثة تهدف إلى نشر الوعي الطبي والمعلومات العلمية والتغذية الصحية والتحليلات المرضية واللياقة البدنية.";
-
-document.getElementById("about-text").innerHTML=
-"أنا طالب في قسم التحليلات المرضية في جامعة جيهان ولدي خبرة في التغذية الصحية وأنظمة الدايت والتمارين الرياضية والتحليلات المختبرية. هدفي نشر الوعي الطبي والمعلومات العلمية بطريقة حديثة وسلسة.";
-
-}else{
-
-document.documentElement.lang="en";
-document.documentElement.dir="ltr";
-
-document.getElementById("title").innerHTML=
-"Modern <span>Medical Education</span> For Everyone";
-
-document.getElementById("desc").innerHTML=
-"Z-Medix is a modern educational medical platform focused on medical awareness, scientific knowledge, nutrition, healthy lifestyle, laboratory analysis, and fitness education.";
-
-document.getElementById("about-text").innerHTML=
-"I am a Medical Laboratory Analysis student at Cihan University with experience in nutrition science, healthy lifestyle systems, fitness, exercise, and medical laboratory analysis. My goal is to provide scientific and trusted medical education in a modern and simple way.";
-
+/* ── Apply translations to all tagged elements ── */
+function translateAll(lang){
+  Object.keys(T[lang]).forEach(function(id){
+    var el=document.getElementById(id);
+    if(el) el.innerHTML=T[lang][id];
+  });
+  /* Hide Arabic supplementary blocks in Arabic mode (content is now inline) */
+  document.querySelectorAll('.arabic-block').forEach(function(el){
+    el.style.display=(lang==='ar')?'none':'block';
+  });
 }
 
+function toggleLanguage(){
+  arabic=!arabic;
+
+  if(arabic){
+    document.documentElement.lang="ar";
+    document.documentElement.dir="rtl";
+    document.getElementById("title").innerHTML="منصة <span>طبية حديثة</span> للجميع";
+    document.getElementById("desc").innerHTML="زد-ميدكس منصة طبية تعليمية حديثة تهدف إلى نشر الوعي الطبي والمعلومات العلمية والتغذية الصحية والتحليلات المرضية واللياقة البدنية.";
+    document.getElementById("about-text").innerHTML="أنا طالب في قسم التحليلات المرضية في جامعة جيهان ولدي خبرة في التغذية الصحية وأنظمة الدايت والتمارين الرياضية والتحليلات المختبرية. هدفي نشر الوعي الطبي والمعلومات العلمية بطريقة حديثة وسلسة.";
+    translateAll('ar');
+  }else{
+    document.documentElement.lang="en";
+    document.documentElement.dir="ltr";
+    document.getElementById("title").innerHTML="Modern <span>Medical Education</span> For Everyone";
+    document.getElementById("desc").innerHTML="Z-Medix is a modern educational medical platform focused on medical awareness, scientific knowledge, nutrition, healthy lifestyle, laboratory analysis, and fitness education.";
+    document.getElementById("about-text").innerHTML="I am a Medical Laboratory Analysis student at Cihan University with experience in nutrition science, healthy lifestyle systems, fitness, exercise, and medical laboratory analysis. My goal is to provide scientific and trusted medical education in a modern and simple way.";
+    translateAll('en');
+  }
 }
 
 </script>
