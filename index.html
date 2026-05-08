@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Znar F. Edo | Medical Education Platform</title>
+
+<meta name="description" content="Znar F. Edo is a modern medical educational platform providing scientific medical information, nutrition knowledge, laboratory analysis education, fitness guidance, and healthy lifestyle awareness.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+--bg:#081420;
+--bg2:#0d1b2a;
+--card:rgba(255,255,255,0.06);
+--text:#ecf6ff;
+--sub:#9db7c9;
+--main:#3cc5ff;
+--main2:#65f0ff;
+--border:rgba(255,255,255,0.08);
+--shadow:0 10px 40px rgba(0,0,0,0.35);
+
+}
+
+.light-mode{
+
+--bg:#edf6ff;
+--bg2:#dcefff;
+--card:rgba(255,255,255,0.7);
+--text:#0d1b2a;
+--sub:#4d6475;
+--main:#0077ff;
+--main2:#00b4d8;
+--border:rgba(0,0,0,0.05);
+--shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,var(--bg),var(--bg2));
+color:var(--text);
+overflow-x:hidden;
+transition:0.4s;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,var(--main),transparent 70%);
+top:-250px;
+right:-250px;
+opacity:0.12;
+pointer-events:none;
+z-index:-1;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(12px);
+background:rgba(0,0,0,0.12);
+border-bottom:1px solid var(--border);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+background:linear-gradient(to right,var(--main),var(--main2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:var(--text);
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:var(--main2);
+}
+
+.actions{
+display:flex;
+gap:12px;
+}
+
+.btn-small{
+padding:10px 16px;
+border:none;
+border-radius:12px;
+background:var(--card);
+color:var(--text);
+cursor:pointer;
+backdrop-filter:blur(10px);
+border:1px solid var(--border);
+transition:0.3s;
+}
+
+.btn-small:hover{
+transform:translateY(-2px);
+background:rgba(255,255,255,0.12);
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:150px 8% 80px;
+gap:60px;
+}
+
+.hero-text{
+max-width:620px;
+animation:fadeUp 1s ease;
+}
+
+.hero-text h1{
+font-size:65px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-text h1 span{
+background:linear-gradient(to right,var(--main),var(--main2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+color:var(--sub);
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.main-btn{
+padding:15px 28px;
+border:none;
+border-radius:14px;
+background:linear-gradient(135deg,var(--main),var(--main2));
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.35s;
+box-shadow:0 8px 30px rgba(0,183,255,0.25);
+}
+
+.main-btn:hover{
+transform:translateY(-3px) scale(1.02);
+}
+
+.second-btn{
+padding:15px 28px;
+border-radius:14px;
+background:var(--card);
+border:1px solid var(--border);
+color:var(--text);
+cursor:pointer;
+backdrop-filter:blur(12px);
+}
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+animation:float 5s ease-in-out infinite;
+}
+
+.image-box{
+width:460px;
+height:500px;
+background:var(--card);
+border-radius:35px;
+border:1px solid var(--border);
+backdrop-filter:blur(14px);
+overflow:hidden;
+box-shadow:var(--shadow);
+}
+
+.image-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.section-title span{
+color:var(--main2);
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about-card{
+background:var(--card);
+padding:40px;
+border-radius:28px;
+border:1px solid var(--border);
+backdrop-filter:blur(12px);
+box-shadow:var(--shadow);
+}
+
+.about-card p{
+line-height:2;
+color:var(--sub);
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.skill{
+padding:25px;
+background:rgba(255,255,255,0.04);
+border-radius:20px;
+border:1px solid var(--border);
+transition:0.35s;
+}
+
+.skill:hover{
+transform:translateY(-6px);
+}
+
+.contact-box{
+background:var(--card);
+padding:50px;
+border-radius:30px;
+border:1px solid var(--border);
+text-align:center;
+backdrop-filter:blur(12px);
+}
+
+.socials{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.socials a{
+padding:15px 28px;
+border-radius:16px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+.whatsapp{
+background:#18c964;
+}
+
+.instagram{
+background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+}
+
+.socials a:hover{
+transform:translateY(-4px);
+}
+
+footer{
+padding:35px;
+text-align:center;
+color:var(--sub);
+border-top:1px solid var(--border);
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@media(max-width:950px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero-text h1{
+font-size:50px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Znar F. Edo</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="actions">
+
+<button class="btn-small" onclick="toggleMode()">
+🌙 Mode
+</button>
+
+<button class="btn-small" onclick="toggleLanguage()">
+🌍 عربي
+</button>
+
+</div>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1 id="title">
+Modern <span>Medical Education</span> For Everyone
+</h1>
+
+<p id="desc">
+Z-Medix is a modern educational medical platform focused on medical awareness, scientific knowledge, nutrition, healthy lifestyle, laboratory analysis, and fitness education.
+</p>
+
+<div class="hero-buttons">
+
+<button class="main-btn">
+Explore More
+</button>
+
+<button class="second-btn">
+Scientific Research
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<div class="image-box">
+
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">
+About <span>Znar F. Edo</span>
+</h2>
+
+<div class="about">
+
+<div class="about-card">
+
+<p id="about-text">
+I am a Medical Laboratory Analysis student at Cihan University with experience in nutrition science, healthy lifestyle systems, fitness, exercise, and medical laboratory analysis. My goal is to provide scientific and trusted medical education in a modern and simple way.
+</p>
+
+</div>
+
+<div class="skills">
+
+<div class="skill">
+🧪 Laboratory Analysis
+</div>
+
+<div class="skill">
+🥗 Nutrition Science
+</div>
+
+<div class="skill">
+💪 Fitness & Exercise
+</div>
+
+<div class="skill">
+🩺 Health Awareness
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact <span>Me</span>
+</h2>
+
+<div class="contact-box">
+
+<p>
+Feel free to contact me through social media platforms.
+</p>
+
+<div class="socials">
+
+<a href="https://wa.me/9647512109755" target="_blank" class="whatsapp">
+WhatsApp
+</a>
+
+<a href="https://www.instagram.com/znvara" target="_blank" class="instagram">
+Instagram
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Znar F. Edo — All Rights Reserved
+</footer>
+
+<script>
+
+function toggleMode(){
+
+document.body.classList.toggle("light-mode");
+
+}
+
+let arabic=false;
+
+function toggleLanguage(){
+
+arabic=!arabic;
+
+if(arabic){
+
+document.documentElement.lang="ar";
+document.documentElement.dir="rtl";
+
+document.getElementById("title").innerHTML=
+"منصة <span>طبية حديثة</span> للجميع";
+
+document.getElementById("desc").innerHTML=
+"زد-ميدكس منصة طبية تعليمية حديثة تهدف إلى نشر الوعي الطبي والمعلومات العلمية والتغذية الصحية والتحليلات المرضية واللياقة البدنية.";
+
+document.getElementById("about-text").innerHTML=
+"أنا طالب في قسم التحليلات المرضية في جامعة جيهان ولدي خبرة في التغذية الصحية وأنظمة الدايت والتمارين الرياضية والتحليلات المختبرية. هدفي نشر الوعي الطبي والمعلومات العلمية بطريقة حديثة وسلسة.";
+
+}else{
+
+document.documentElement.lang="en";
+document.documentElement.dir="ltr";
+
+document.getElementById("title").innerHTML=
+"Modern <span>Medical Education</span> For Everyone";
+
+document.getElementById("desc").innerHTML=
+"Z-Medix is a modern educational medical platform focused on medical awareness, scientific knowledge, nutrition, healthy lifestyle, laboratory analysis, and fitness education.";
+
+document.getElementById("about-text").innerHTML=
+"I am a Medical Laboratory Analysis student at Cihan University with experience in nutrition science, healthy lifestyle systems, fitness, exercise, and medical laboratory analysis. My goal is to provide scientific and trusted medical education in a modern and simple way.";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
