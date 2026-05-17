@@ -16,29 +16,57 @@
 
 :root{
 
---bg:#f8fafc;
---bg2:#f1f5f9;
+/* ===== LIGHT MODE ===== */
+--bg:#f5f7fb;
 --card:#ffffff;
 --text:#0f172a;
---sub:#64748b;
---main:#0ea5e9;
---main2:#0284c7;
+--muted:#64748b;
+
+/* medical blue */
+--primary:#1e88e5;
+--primary2:#42a5f5;
+
+/* soft gray */
+--gray:#94a3b8;
 --border:#e2e8f0;
---shadow:0 10px 25px rgba(0,0,0,0.06);
+
+/* glow */
+--glow:rgba(30,136,229,0.25);
+
+/* aliases for existing components */
+--bg2:#eaf2ff;
+--sub:var(--muted);
+--main:var(--primary);
+--main2:var(--primary2);
+--shadow:0 10px 30px rgba(0,0,0,0.05);
 
 }
 
+/* ===== DARK MODE ===== */
 body.dark{
 
 --bg:#0b1220;
---bg2:#0f172a;
 --card:#0f172a;
 --text:#e2e8f0;
---sub:#94a3b8;
---main:#38bdf8;
---main2:#0ea5e9;
+--muted:#94a3b8;
+
+/* deep medical blue */
+--primary:#3b82f6;
+--primary2:#60a5fa;
+
+/* gray balance */
+--gray:#64748b;
 --border:#1f2937;
---shadow:0 15px 35px rgba(0,0,0,0.4);
+
+/* glow */
+--glow:rgba(59,130,246,0.25);
+
+/* aliases for existing components */
+--bg2:#0f172a;
+--sub:var(--muted);
+--main:var(--primary);
+--main2:var(--primary2);
+--shadow:0 15px 40px var(--glow);
 
 }
 
@@ -981,6 +1009,236 @@ body{
 @keyframes move{
     from{transform:translateX(0)}
     to{transform:translateX(-50%)}
+}
+
+/* ===== NEW MEDICAL UI STYLES ===== */
+/* ===== GLOBAL BACKGROUND ===== */
+body{
+    background:linear-gradient(135deg,var(--bg),var(--bg2));
+    color:var(--text);
+    transition:0.5s;
+}
+
+/* ===== CARDS (medical glass style) ===== */
+.card, .or-article, .article{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+/* hover luxury */
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px var(--glow);
+}
+
+/* ===== HEADINGS ===== */
+h1,h2,h3{
+    color:var(--text);
+}
+
+/* ===== LINKS / ACCENTS ===== */
+a{
+    color:var(--primary);
+}
+
+a:hover{
+    color:var(--primary2);
+}
+
+/* ===== BUTTONS ===== */
+button{
+    background:linear-gradient(135deg,var(--primary),var(--primary2));
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px 14px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 25px var(--glow);
+}
+
+/* ===== TAGS (medical labels) ===== */
+.tag{
+    background:rgba(59,130,246,0.1);
+    color:var(--primary);
+    padding:4px 10px;
+    border-radius:8px;
+    font-size:12px;
+}
+
+/* ===== INPUTS ===== */
+input{
+    border:1px solid var(--border);
+    padding:10px;
+    border-radius:10px;
+    outline:none;
+}
+
+input:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 10px var(--glow);
+}
+
+/* ===== RESPONSIVE DESIGN (TABLETS & PHONES) ===== */
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        padding: 120px 5% 40px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .intro {
+        font-size: 18px;
+    }
+
+    .image-box {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 4/5;
+        margin: 0 auto;
+    }
+
+    .about-card, .contact-box {
+        padding: 25px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .articles h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .articles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .bmi-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .article-cover {
+        height: 200px;
+    }
+
+    .article-body {
+        padding: 25px 20px;
+    }
+
+    .risk-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 150px 5% 40px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .socials {
+        flex-direction: column;
+    }
+
+    .socials a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .risk-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bmi-formula {
+        font-size: 16px;
+    }
+
+    .article-title-main {
+        font-size: 22px;
+    }
+    
+    .contact-box {
+        padding: 20px;
+    }
 }
 
 </style>
