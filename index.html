@@ -1241,6 +1241,269 @@ html, body {
     }
 }
 
+/* ===== CBC CONTENT & INTERACTIVE STYLES ===== */
+.cbc-table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+.cbc-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+}
+.cbc-table th {
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    color: white;
+    padding: 14px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: start;
+}
+body.dark .cbc-table th {
+    background: linear-gradient(135deg, #1e293b, #334155);
+}
+.cbc-table td {
+    padding: 12px 18px;
+    font-size: 14px;
+    color: var(--sub);
+    border-bottom: 1px solid var(--border);
+    text-align: start;
+}
+.cbc-table tr:last-child td {
+    border-bottom: none;
+}
+.cbc-table tr:hover td {
+    background: rgba(59,130,246,0.03);
+    color: var(--text);
+}
+.cbc-badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.cbc-badge.normal {
+    background: rgba(16,185,129,0.15);
+    color: #10b981;
+}
+.cbc-badge.low {
+    background: rgba(245,158,11,0.15);
+    color: #f59e0b;
+}
+.cbc-badge.high {
+    background: rgba(239,68,68,0.15);
+    color: #ef4444;
+}
+
+/* Infographic styling */
+.cbc-infographic-container {
+    margin: 30px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+.cbc-infographic-container:hover {
+    transform: scale(1.02);
+}
+.cbc-infographic-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Lab Report styling */
+.lab-report {
+    background: var(--card);
+    border: 2px dashed var(--gray);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 25px 0;
+    font-family: monospace, Courier, monospace;
+}
+.lab-report-header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text);
+}
+.lab-report-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+.lab-report-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+    font-size: 14px;
+}
+.lab-report-row:last-child {
+    border-bottom: none;
+}
+.lab-report-row span.name {
+    color: var(--text);
+    font-weight: bold;
+    text-align: start;
+}
+.lab-report-row span.val {
+    color: var(--text);
+}
+.lab-report-row span.ref {
+    color: var(--muted);
+}
+.lab-report-diagnosis {
+    margin-top: 20px;
+    padding: 12px;
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 8px;
+    text-align: center;
+    color: #ef4444;
+    font-weight: bold;
+}
+
+/* Code box */
+.code-box {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    margin: 20px 0;
+    direction: ltr;
+    text-align: left;
+}
+
+/* Interactive Analyzer */
+.cbc-analyzer {
+    background: linear-gradient(135deg, rgba(30,136,229,0.04), rgba(66,165,245,0.08));
+    border: 1px solid rgba(30,136,229,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 35px 0;
+}
+.cbc-analyzer h3 {
+    margin-top: 0 !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    color: var(--primary) !important;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cbc-inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.cbc-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.cbc-input-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    text-align: start;
+}
+.cbc-input-group select, .cbc-input-group input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+.cbc-input-group select:focus, .cbc-input-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 8px var(--glow);
+}
+.cbc-btn-analyze {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+.cbc-btn-analyze:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--glow);
+}
+.cbc-results-panel {
+    margin-top: 25px;
+    padding: 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: none;
+}
+.cbc-results-panel.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+.cbc-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+.cbc-result-item:last-child {
+    border-bottom: none;
+}
+.cbc-result-item span.label {
+    font-weight: bold;
+    color: var(--text);
+    text-align: start;
+}
+.cbc-result-summary {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+.cbc-result-summary.normal {
+    background: rgba(16,185,129,0.1);
+    color: #10b981;
+    border: 1px solid rgba(16,185,129,0.2);
+}
+.cbc-result-summary.abnormal {
+    background: rgba(239,68,68,0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239,68,68,0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 </style>
 </head>
 
@@ -1375,12 +1638,12 @@ I’m Znar, a first-year Medical Laboratory Analysis student at Cihan University
         </div>
 
         <div class="card">
-            <img src="bloodtest.jpg" alt="Blood Test" onerror="this.src='https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&q=80'">
-            <h3 id="card2-title" data-en="Blood Test Basics" data-ar="أساسيات تحاليل الدم">Blood Test Basics</h3>
-            <p id="card2-desc" data-en="Simple explanation of common laboratory blood tests." data-ar="شرح مبسط لأشهر تحاليل الدم المخبرية.">
-                Simple explanation of common laboratory blood tests.
+            <img src="cbc.jpg" alt="CBC Test" onerror="this.src='https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&q=80'">
+            <h3 id="card2-title" data-en="Complete Blood Count (CBC)" data-ar="تعداد الدم الكامل (CBC)">Complete Blood Count (CBC)</h3>
+            <p id="card2-desc" data-en="Learn about CBC components, normal ranges, and clinical result analysis." data-ar="تعرف على مكونات فحص CBC، المعدلات الطبيعية، وتفسير النتائج السريرية.">
+                Learn about CBC components, normal ranges, and clinical result analysis.
             </p>
-            <a href="#" class="read-more-btn" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
+            <a href="javascript:void(0)" onclick="openArticle('cbc')" class="read-more-btn" data-en="Read More" data-ar="اقرأ المزيد">Read More</a>
         </div>
 
         <div class="card">
@@ -1414,6 +1677,14 @@ I’m Znar, a first-year Medical Laboratory Analysis student at Cihan University
     <h3 id="card-title-obesity" data-en="Obesity (السمنة)" data-ar="السمنة (Obesity)">Obesity (السمنة)</h3>
     <p id="card-desc-obesity" data-en="A comprehensive bilingual guide on obesity — causes, hormonal factors, BMI classification, health risks, and evidence-based treatment strategies." data-ar="دليل شامل ثنائي اللغة حول السمنة — الأسباب، العوامل الهرمونية، تصنيف مؤشر كتلة الجسم، المخاطر الصحية، واستراتيجيات العلاج.">A comprehensive bilingual guide on obesity — causes, hormonal factors, BMI classification, health risks, and evidence-based treatment strategies.</p>
     <button class="topic-read-btn">📖 <span id="card-btn-obesity" data-en="Read Article" data-ar="اقرأ المقال">Read Article</span> →</button>
+  </div>
+
+  <div class="topic-card" onclick="openArticle('cbc')">
+    <span class="topic-icon">🩸</span>
+    <span class="topic-tag" id="card-tag-cbc" data-en="🧪 Laboratory Analysis" data-ar="🧪 التحليلات المرضية">🧪 Laboratory Analysis</span>
+    <h3 id="card-title-cbc" data-en="Complete Blood Count (CBC)" data-ar="تعداد الدم الكامل (CBC)">Complete Blood Count (CBC)</h3>
+    <p id="card-desc-cbc" data-en="A detailed guide to CBC – components (RBC, Hb, WBC, PLT, etc.), normal ranges, results interpretation, and clinical cases." data-ar="دليل تفصيلي لفحص تعداد الدم الكامل (CBC) – المكونات، المعدلات الطبيعية، تفسير النتائج، وحالات سريرية.">A detailed guide to CBC – components (RBC, Hb, WBC, PLT, etc.), normal ranges, results interpretation, and clinical cases.</p>
+    <button class="topic-read-btn">📖 <span id="card-btn-cbc" data-en="Read Article" data-ar="اقرأ المقال">Read Article</span> →</button>
   </div>
 
 </div>
@@ -1592,6 +1863,244 @@ I’m Znar, a first-year Medical Laboratory Analysis student at Cihan University
 
 </div><!-- end article-panel -->
 
+<!-- ARTICLE PANEL (hidden by default) -->
+<div class="article-pane          <tr data-en="<td>RBC</td><td>Red Blood Cells (RBC)</td><td>Oxygen transport via Hemoglobin</td><td>Male: 4.5 – 5.9, Female: 4.1 – 5.1 x10¹²/L</td>"
+              data-ar="<td>RBC</td><td>عدد كريات الدم الحمراء (RBC)</td><td>نقل الأكسجين إلى الأنسجة</td><td>الرجال: 4.5 - 5.9، النساء: 4.1 - 5.1 مليون/ميكرولتر</td>">
+            <td>RBC</td><td>Red Blood Cells (RBC)</td><td>Oxygen transport via Hemoglobin</td><td>Male: 4.5 – 5.9, Female: 4.1 – 5.1 x10¹²/L</td>
+          </tr>
+          <tr data-en="<td>Hb</td><td>Hemoglobin (Hb)</td><td>Oxygen-binding protein in RBCs</td><td>Male: 13.5 – 17.5, Female: 12.0 – 15.5 g/dL</td>"
+              data-ar="<td>Hb</td><td>الهيموغلوبين (Hb)</td><td>حمل الأكسجين في خلايا الدم</td><td>الرجال: 13.5 - 17.5، النساء: 12.0 - 15.5 جم/ديسيلتر</td>">
+            <td>Hb</td><td>Hemoglobin (Hb)</td><td>Oxygen-binding protein in RBCs</td><td>Male: 13.5 – 17.5, Female: 12.0 – 15.5 g/dL</td>
+          </tr>
+          <tr data-en="<td>HCT</td><td>Hematocrit (HCT)</td><td>Percentage volume of RBCs in blood</td><td>Male: 41% – 53%, Female: 36% – 46%</td>"
+              data-ar="<td>HCT</td><td>الهيماتوكريت (HCT)</td><td>نسبة خلايا الدم الحمراء للدم الكلي</td><td>الرجال: 41% - 53%، النساء: 36% - 46%</td>">
+            <td>HCT</td><td>Hematocrit (HCT)</td><td>Percentage volume of RBCs in blood</td><td>Male: 41% – 53%, Female: 36% – 46%</td>
+          </tr>
+          <tr data-en="<td>WBC</td><td>White Blood Cells (WBC)</td><td>Immune defense against pathogens</td><td>4,000 – 11,000 /µL</td>"
+              data-ar="<td>WBC</td><td>عدد كريات الدم البيضاء (WBC)</td><td>مقاومة العدوى ومحاربة الجراثيم</td><td>4,000 - 11,000 /ميكرولتر</td>">
+            <td>WBC</td><td>White Blood Cells (WBC)</td><td>Immune defense against pathogens</td><td>4,000 – 11,000 /µL</td>
+          </tr>
+          <tr data-en="<td>PLT</td><td>Platelets (PLT)</td><td>Hemostasis and blood clot formation</td><td>150,000 – 450,000 /µL</td>"
+              data-ar="<td>PLT</td><td>عدد الصفائح الدموية (PLT)</td><td>تجلط الدم ومنع النزيف</td><td>150,000 - 450,000 /ميكرولتر</td>">
+            <td>PLT</td><td>Platelets (PLT)</td><td>Hemostasis and blood clot formation</td><td>150,000 – 450,000 /µL</td>
+          </tr>
+          <tr data-en="<td>MCV</td><td>Mean Corpuscular Volume (MCV)</td><td>Measures the average size of RBCs</td><td>80 – 100 fL</td>"
+              data-ar="<td>MCV</td><td>متوسط حجم الكرية (MCV)</td><td>قياس متوسط حجم خلايا الدم الحمراء</td><td>80 - 100 فيمتولتر</td>">
+            <td>MCV</td><td>Mean Corpuscular Volume (MCV)</td><td>Measures the average size of RBCs</td><td>80 – 100 fL</td>
+          </tr>
+          <tr data-en="<td>MCH</td><td>Mean Corpuscular Hemoglobin (MCH)</td><td>Average amount of Hb per RBC</td><td>27 – 33 pg</td>"
+              data-ar="<td>MCH</td><td>متوسط كمية الهيموغلوبين في الكرية (MCH)</td><td>متوسط كمية الهيموغلوبين داخل كل خلية حمراء</td><td>27 - 33 بيكوغرام</td>">
+            <td>MCH</td><td>Mean Corpuscular Hemoglobin (MCH)</td><td>Average amount of Hb per RBC</td><td>27 – 33 pg</td>
+          </tr>
+          <tr data-en="<td>MCHC</td><td>Mean Corpuscular Hemoglobin Concentration (MCHC)</td><td>Average concentration of Hb in RBC volume</td><td>32 – 36 g/dL</td>"
+              data-ar="<td>MCHC</td><td>متوسط تركيز الهيموغلوبين في الكرية (MCHC)</td><td>تركيز الهيموغلوبين في حجم خلايا حمراء محدد</td><td>32 - 36 جم/ديسيلتر</td>">
+            <td>MCHC</td><td>Mean Corpuscular Hemoglobin Concentration (MCHC)</td><td>Average concentration of Hb in RBC volume</td><td>32 – 36 g/dL</td>
+          </tr>
+          <tr data-en="<td>RDW</td><td>Red Cell Distribution Width (RDW)</td><td>Indicates variation in RBC sizes</td><td>11.5% – 14.5%</td>"
+              data-ar="<td>RDW</td><td>تباين حجم كريات الدم الحمراء (RDW)</td><td>قياس مدى التفاوت والاختلاف في حجم خلايا الدم الحمراء</td><td>11.5% - 14.5%</td>">
+            <td>RDW</td><td>Red Cell Distribution Width (RDW)</td><td>Indicates variation in RBC sizes</td><td>11.5% – 14.5%</td>
+          </tr>�هزة تحليل أمراض الدم الآلية، حيث يقيس تركيز وحجم وتوزيع سلالات الخلايا المختلفة في الدورة الدموية.">A Complete Blood Count (CBC) evaluates the cellular elements of blood. The test is performable within minutes using automated hematology analyzers, measuring the concentration, size, and distribution of different cell lines in the circulatory system.</p>
+
+    <!-- Components Section -->
+    <h2 id="cbc-h2-components" data-en="CBC Components &amp; Normal Ranges" data-ar="مكونات فحص CBC ومعدلاتها الطبيعية">CBC Components &amp; Normal Ranges</h2>
+    <p id="cbc-p-components" data-en="A standard CBC comprises several parameters, each reflecting a specific aspect of hematopoiesis and immune system status:" data-ar="يتكون فحص CBC القياسي من عدة مؤشرات، يعكس كل منها جانباً معيناً من عملية تكوين خلايا الدم وحالة الجهاز المناعي:"></p>
+
+    <div class="cbc-table-container">
+      <table class="cbc-table">
+        <thead>
+          <tr data-en="<th>Abbreviation</th><th>Component Name</th><th>Function</th><th>Normal Range</th>"
+              data-ar="<th>الاختصار</th><th>اسم المكون</th><th>الوظيفة</th><th>القيم الطبيعية</th>">
+            <th>Abbreviation</th><th>Component Name</th><th>Function</th><th>Normal Range</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-en="<td>RBC</td><td>Red Blood Cells (كريات الدم الحمراء)</td><td>Oxygen transport via hemoglobin</td><td>4.1 – 5.9 x10¹²/L</td>"
+              data-ar="<td>RBC</td><td>كريات الدم الحمراء</td><td>نقل الأوكسجين إلى الأنسجة</td><td>4.1 - 5.9 مليون/ميكرولتر</td>">
+            <td>RBC</td><td>Red Blood Cells (كريات الدم الحمراء)</td><td>Oxygen transport via hemoglobin</td><td>4.1 – 5.9 x10¹²/L</td>
+          </tr>
+          <tr data-en="<td>Hb</td><td>Hemoglobin (الهيموغلوبين)</td><td>Oxygen-binding protein in RBCs</td><td>12.0 – 17.5 g/dL</td>"
+              data-ar="<td>Hb</td><td>الهيموغلوبين</td><td>حمل الأوكسجين في خلايا الدم</td><td>12 - 17.5 جم/ديسيلتر</td>">
+            <td>Hb</td><td>Hemoglobin (الهيموغلوبين)</td><td>Oxygen-binding protein in RBCs</td><td>12.0 – 17.5 g/dL</td>
+          </tr>
+          <tr data-en="<td>HCT</td><td>Hematocrit (الهيماتوكريت)</td><td>Percentage volume of RBCs in blood</td><td>36% – 53%</td>"
+              data-ar="<td>HCT</td><td>الهيماتوكريت</td><td>نسبة خلايا الدم الحمراء للدم الكلي</td><td>36% - 53%</td>">
+            <td>HCT</td><td>Hematocrit (الهيماتوكريت)</td><td>Percentage volume of RBCs in blood</td><td>36% – 53%</td>
+          </tr>
+          <tr data-en="<td>WBC</td><td>White Blood Cells (كريات الدم البيضاء)</td><td>Immune defense against pathogens</td><td>4,000 – 11,000 /µL</td>"
+              data-ar="<td>WBC</td><td>كريات الدم البيضاء</td><td>مقاومة العدوى ومحاربة الجراثيم</td><td>4,000 - 11,000 /ميكرولتر</td>">
+            <td>WBC</td><td>White Blood Cells (كريات الدم البيضاء)</td><td>Immune defense against pathogens</td><td>4,000 – 11,000 /µL</td>
+          </tr>
+          <tr data-en="<td>PLT</td><td>Platelets (الصفائح الدموية)</td><td>Hemostasis and blood clot formation</td><td>150,000 – 450,000 /µL</td>"
+              data-ar="<td>PLT</td><td>الصفائح الدموية</td><td>تجلط الدم ومنع النزيف</td><td>150,000 - 450,000 /ميكرولتر</td>">
+            <td>PLT</td><td>Platelets (الصفائح الدموية)</td><td>Hemostasis and blood clot formation</td><td>150,000 – 450,000 /µL</td>
+          </tr>
+          <tr data-en="<td>MCV</td><td>Mean Corpuscular Volume</td><td>Measures the average size of RBCs</td><td>80 – 100 fL</td>"
+              data-ar="<td>MCV</td><td>حجم الكرية المتوسط (MCV)</td><td>قياس متوسط حجم خلايا الدم الحمراء</td><td>80 - 100 فيمتولتر</td>">
+            <td>MCV</td><td>Mean Corpuscular Volume</td><td>Measures the average size of RBCs</td><td>80 – 100 fL</td>
+          </tr>
+          <tr data-en="<td>MCH</td><td>Mean Corpuscular Hemoglobin</td><td>Average amount of Hb per RBC</td><td>27 – 33 pg</td>"
+              data-ar="<td>MCH</td><td>كمية الهيموغلوبين المتوسطة (MCH)</td><td>متوسط كمية الهيموغلوبين داخل كل خلية حمراء</td><td>27 - 33 بيكوغرام</td>">
+            <td>MCH</td><td>Mean Corpuscular Hemoglobin</td><td>Average amount of Hb per RBC</td><td>27 – 33 pg</td>
+          </tr>
+          <tr data-en="<td>MCHC</td><td>MCH Concentration</td><td>Average concentration of Hb in RBC volume</td><td>32 – 36 g/dL</td>"
+              data-ar="<td>MCHC</td><td>تركيز الهيموغلوبين المتوسط (MCHC)</td><td>تركيز الهيموغلوبين في حجم خلايا حمراء محدد</td><td>32 - 36 جم/ديسيلتر</td>">
+            <td>MCHC</td><td>MCH Concentration</td><td>Average concentration of Hb in RBC volume</td><td>32 – 36 g/dL</td>
+          </tr>
+          <tr data-en="<td>RDW</td><td>Red Cell Distribution Width</td><td>Indicates variation in RBC sizes</td><td>11.5% – 15.0%</td>"
+              data-ar="<td>RDW</td><td>اختلاف حجم الكريات (RDW)</td><td>قياس مدى التفاوت والاختلاف في حجم خلايا الدم الحمراء</td><td>11% - 15%</td>">
+            <td>RDW</td><td>Red Cell Distribution Width</td><td>Indicates variation in RBC sizes</td><td>11.5% – 15.0%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Visual Infographic -->
+    <h2 id="cbc-h2-infographic" data-en="Visual Infographic Guide" data-ar="مخطط انفوجرافيك توضيحي">Visual Infographic Guide</h2>
+    <p id="cbc-p-infographic" data-en="Refer to this clinical infographic for a visual breakdown of CBC parameters, analysis steps, and advice before testing:" data-ar="يرجى مراجعة هذا الانفوجرافيك السريري للحصول على تفصيل مرئي لمؤشرات CBC وخطوات التحليل والنصائح المتبعة قبل الفحص:"></p>
+    <div class="cbc-infographic-container">
+      <img src="cbc.jpg" alt="CBC Complete Blood Count Infographic" loading="lazy">
+    </div>
+
+    <!-- Result Interpretation -->
+    <h2 id="cbc-h2-interpretation" data-en="Result Interpretation" data-ar="تفسير النتائج">Result Interpretation</h2>
+    <p id="cbc-p-interpretation" data-en="Clinical deviations in CBC values assist in identifying specific medical conditions:" data-ar="تساعد الانحرافات والأنماط غير الطبيعية في قيم فحص CBC في تحديد حالات طبية معينة:"></p>
+
+    <div class="cbc-table-container">
+      <table class="cbc-table">
+        <thead>
+          <tr data-en="<th>Condition / Value</th><th>Potential Clinical Diagnosis</th>"
+              data-ar="<th>الحالة / المؤشر</th><th>التشخيص السريري المحتمل</th>">
+            <th>Condition / Value</th><th>Potential Clinical Diagnosis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-en="<td class='status-high'>High RBC / Hb / Hct</td><td>Dehydration, chronic hypoxia (e.g. smoking, lung disease), or Polycythemia Vera.</td>"
+              data-ar="<td class='status-high'>ارتفاع RBC / Hb / Hct</td><td>قد يدل على الجفاف، أو أمراض الرئة والقلب، أو كثرة الحمر الحقيقية.</td>">
+            <td class="status-high">High RBC / Hb / Hct</td><td>Dehydration, chronic hypoxia (e.g. smoking, lung disease), or Polycythemia Vera.</td>
+          </tr>
+          <tr data-en="<td class='status-low'>Low RBC / Hb / Hct</td><td>Anemia (iron deficiency, Vitamin B12/folate deficiency, blood loss, or bone marrow failure).</td>"
+              data-ar="<td class='status-low'>انخفاض RBC / Hb / Hct</td><td>فقر دم بسبب نقص الحديد، نقص فيتامين B12 أو الفولات، نزيف، أو أمراض مزمنة.</td>">
+            <td class="status-low">Low RBC / Hb / Hct</td><td>Anemia (iron deficiency, Vitamin B12/folate deficiency, blood loss, or bone marrow failure).</td>
+          </tr>
+          <tr data-en="<td class='status-high'>High WBC</td><td>Active infection (bacterial/viral), systemic inflammation, tissue damage, or leukemia.</td>"
+              data-ar="<td class='status-high'>ارتفاع WBC</td><td>قد يدل على عدوى، التهاب، إجهاد، أو بعض أمراض الدم.</td>">
+            <td class="status-high">High WBC</td><td>Active infection (bacterial/viral), systemic inflammation, tissue damage, or leukemia.</td>
+          </tr>
+          <tr data-en="<td class='status-low'>Low Platelets (PLT)</td><td>Thrombocytopenia (increased bleeding risk, autoimmune destruction, or medication side effects).</td>"
+              data-ar="<td class='status-low'>انخفاض الصفائح (PLT)</td><td>قد يدل على نزيف، أمراض مناعية، أو تأثير أدوية.</td>">
+            <td class="status-low">Low Platelets (PLT)</td><td>Thrombocytopenia (increased bleeding risk, autoimmune destruction, or medication side effects).</td>
+          </tr>
+          <tr data-en="<td class='status-normal'>Normal CBC</td><td>Blood cells within normal physiologic parameters; no current indications of hematologic disease.</td>"
+              data-ar="<td class='status-normal'>CBC طبيعي</td><td>يشير إلى عدم وجود اضطراب ظاهر في مكونات الدم.</td>">
+            <td class="status-normal">Normal CBC</td><td>Blood cells within normal physiologic parameters; no current indications of hematologic disease.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Clinical Case -->
+    <h2 id="cbc-h2-case" data-en="Clinical Case Study" data-ar="حالة سريرية">Clinical Case Study</h2>
+    <p id="cbc-p-case" data-en="Below is a sample laboratory report depicting a classical presentation of microcytic hypochromic anemia, commonly associated with iron deficiency:" data-ar="فيما يلي نموذج لتقرير مخبري يوضح الحالة التقليدية لفقر الدم صغير الخلايا ناقص الصباغ، المرتبط عادة بنقص الحديد:"></p>
+    
+    <div class="lab-report">
+      <div class="lab-report-header">
+        <span data-en="PATIENT: Female, 22 years old" data-ar="المريض: أنثى، ٢٢ عاماً">PATIENT: Female, 22 years old</span>
+        <span data-en="REPORT ID: #2026-9871" data-ar="رقم التقرير: #٢٠٢٦-٩٨٧١">REPORT ID: #2026-9871</span>
+      </div>
+      <div class="lab-report-title" data-en="HEMATOLOGY CLINICAL REPORT: CBC" data-ar="تقرير أمراض الدم السريري: CBC">HEMATOLOGY CLINICAL REPORT: CBC</div>
+      
+      <div class="lab-report-row" data-en="<span class='name'>Hemoglobin (Hb)</span><span class='val status-low'>8.5 g/dL</span><span class='ref'>[Ref: 12.0 - 15.5]</span>"
+                                  data-ar="<span class='name'>الهيموغلوبين (Hb)</span><span class='val status-low'>8.5 جم/ديسيلتر</span><span class='ref'>[الطبيعي: 12.0 - 15.5]</span>">
+        <span class="name">Hemoglobin (Hb)</span><span class="val status-low">8.5 g/dL</span><span class="ref">[Ref: 12.0 - 15.5]</span>
+      </div>
+      
+      <div class="lab-report-row" data-en="<span class='name'>Mean Corpuscular Volume (MCV)</span><span class='val status-low'>68 fL</span><span class='ref'>[Ref: 80 - 100]</span>"
+                                  data-ar="<span class='name'>متوسط حجم الكرية (MCV)</span><span class='val status-low'>68 فيمتولتر</span><span class='ref'>[الطبيعي: 80 - 100]</span>">
+        <span class="name">Mean Corpuscular Volume (MCV)</span><span class="val status-low">68 fL</span><span class="ref">[Ref: 80 - 100]</span>
+      </div>
+      
+      <div class="lab-report-row" data-en="<span class='name'>Red Blood Cells (RBC)</span><span class='val status-low'>3.1 x10¹²/L</span><span class='ref'>[Ref: 4.1 - 5.1]</span>"
+                                  data-ar="<span class='name'>عدد كريات الدم الحمراء (RBC)</span><span class='val status-low'>3.1 مليون/ميكرولتر</span><span class='ref'>[الطبيعي: 4.1 - 5.1]</span>">
+        <span class="name">Red Blood Cells (RBC)</span><span class="val status-low">3.1 x10¹²/L</span><span class="ref">[Ref: 4.1 - 5.1]</span>
+      </div>
+      
+      <div class="lab-report-row" data-en="<span class='name'>White Blood Cells (WBC)</span><span class='val status-normal'>9,000 /µL</span><span class='ref'>[Ref: 4,000 - 11,000]</span>"
+                                  data-ar="<span class='name'>عدد كريات الدم البيضاء (WBC)</span><span class='val status-normal'>9,000 /ميكرولتر</span><span class='ref'>[الطبيعي: 4,000 - 11,000]</span>">
+        <span class="name">White Blood Cells (WBC)</span><span class="val status-normal">9,000 /µL</span><span class="ref">[Ref: 4,000 - 11,000]</span>
+      </div>
+      
+      <div class="lab-report-row" data-en="<span class='name'>Platelets (PLT)</span><span class='val status-normal'>410,000 /µL</span><span class='ref'>[Ref: 150,000 - 450,000]</span>"
+                                  data-ar="<span class='name'>عدد الصفائح الدموية (PLT)</span><span class='val status-normal'>410,000 /ميكرولتر</span><span class='ref'>[الطبيعي: 150,000 - 450,000]</span>">
+        <span class="name">Platelets (PLT)</span><span class="val status-normal">410,000 /µL</span><span class="ref">[Ref: 150,000 - 450,000]</span>
+      </div>
+      
+      <div class="lab-report-diagnosis" data-en="CLINICAL DIAGNOSIS: Iron Deficiency Anemia (فقر دم بنقص الحديد)"
+                                        data-ar="التشخيص السريري: فقر دم بنقص الحديد (Iron Deficiency Anemia)">
+        CLINICAL DIAGNOSIS: Iron Deficiency Anemia (فقر دم بنقص الحديد)
+      </div>
+    </div>
+
+    <!-- Interactive CBC Analyzer -->
+    <h2 id="cbc-h2-analyzer" data-en="Interactive CBC Simulator" data-ar="محلل فحص CBC التفاعلي">Interactive CBC Simulator</h2>
+    <p id="cbc-p-analyzer" data-en="Simulate a CBC result analysis by entering custom blood parameters below. Our interactive algorithm will evaluate the inputs and display standard hematological classifications:" data-ar="قم بمحاكاة تحليل نتائج فحص CBC عن طريق إدخال قيم مؤشرات الدم أدناه. سيقوم برنامجنا التفاعلي بتقييم المدخلات وعرض التصنيفات المخبرية المعتمدة:"></p>
+    
+    <div class="cbc-analyzer">
+      <h3 data-en="CBC Lab Values Evaluation" data-ar="تقييم قيم فحص CBC المخبرية">CBC Lab Values Evaluation</h3>
+      <div class="cbc-inputs-grid">
+        <div class="cbc-input-group">
+          <label for="analyzer-gender" data-en="Patient Gender" data-ar="جنس المريض">Patient Gender</label>
+          <select id="analyzer-gender">
+            <option value="male" data-en="Male (ذكر)" data-ar="ذكر">Male (ذكر)</option>
+            <option value="female" data-en="Female (أنثى)" data-ar="أنثى">Female (أنثى)</option>
+          </select>
+        </div>
+        <div class="cbc-input-group">
+          <label for="analyzer-hb" data-en="Hemoglobin (Hb) (g/dL)" data-ar="الهيموغلوبين (Hb) (جم/ديسيلتر)">Hemoglobin (Hb) (g/dL)</label>
+          <input type="number" id="analyzer-hb" step="0.1" placeholder="e.g. 13.5" value="13.5">
+        </div>
+        <div class="cbc-input-group">
+          <label for="analyzer-rbc" data-en="Red Blood Cells (RBC) (M/µL)" data-ar="عدد كريات الدم الحمراء (RBC) (مليون/ميكرولتر)">Red Blood Cells (RBC) (M/µL)</label>
+          <input type="number" id="analyzer-rbc" step="0.1" placeholder="e.g. 4.8" value="4.8">
+        </div>
+        <div class="cbc-input-group">
+          <label for="analyzer-wbc" data-en="White Blood Cells (WBC) (/µL)" data-ar="عدد كريات الدم البيضاء (WBC) (/ميكرولتر)">White Blood Cells (WBC) (/µL)</label>
+          <input type="number" id="analyzer-wbc" step="100" placeholder="e.g. 7000" value="7000">
+        </div>
+        <div class="cbc-input-group">
+          <label for="analyzer-plt" data-en="Platelets (PLT) (/µL)" data-ar="عدد الصفائح الدموية (PLT) (/ميكرولتر)">Platelets (PLT) (/µL)</label>
+          <input type="number" id="analyzer-plt" step="1000" placeholder="e.g. 250000" value="250000">
+        </div>
+        <div class="cbc-input-group">
+          <label for="analyzer-mcv" data-en="MCV (fL)" data-ar="متوسط حجم الكرية (MCV) (فيمتولتر)">MCV (fL)</label>
+          <input type="number" id="analyzer-mcv" step="1" placeholder="e.g. 90" value="90">
+        </div>
+      </div>
+      <button class="cbc-btn-analyze" id="btn-cbc-analyze" onclick="runCbcAnalysis()" data-en="Analyze Results" data-ar="تحليل النتائج">Analyze Results</button>
+      
+      <div class="cbc-results-panel" id="cbc-results-panel">
+         <h4 style="text-align:center; margin-bottom:15px; color:var(--primary);" data-en="Clinical Analysis Report" data-ar="تقرير التحليل السريري">Clinical Analysis Report</h4>
+         <div id="cbc-results-items"></div>
+         <div id="cbc-results-summary" class="cbc-result-summary"></div>
+      </div>
+    </div>
+
+
+
+    <!-- References -->
+    <h2 id="cbc-h2-refs" data-en="📚 International Sources" data-ar="📚 المصادر العالمية">📚 International Sources</h2>
+    <ul class="references-list">
+      <li>🔗 <a href="https://www.who.int" target="_blank" rel="noopener">WHO - World Health Organization</a></li>
+      <li>🔗 <a href="https://www.mayoclinic.org" target="_blank" rel="noopener">Mayo Clinic</a></li>
+      <li>🔗 <a href="https://www.nih.gov" target="_blank" rel="noopener">NIH - National Institutes of Health</a></li>
+      <li>🔗 <a href="https://medlineplus.gov" target="_blank" rel="noopener">MedlinePlus</a></li>
+      <li>🔗 <a href="https://my.clevelandclinic.org" target="_blank" rel="noopener">Cleveland Clinic</a></li>
+    </ul>
+
+  </div><!-- end article-body -->
+  </article>
+
+</div><!-- end article-panel -->
+
 </section>
 <!-- ===== END NUTRITION SCIENCE ===== -->
 
@@ -1662,6 +2171,126 @@ function closeArticle(id){
   document.getElementById('nutrition').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
+/* ===== CBC SIMULATOR LOGIC ===== */
+function runCbcAnalysis(){
+    const gender = document.getElementById('analyzer-gender').value;
+    const hb = parseFloat(document.getElementById('analyzer-hb').value);
+    const rbc = parseFloat(document.getElementById('analyzer-rbc').value);
+    const wbc = parseFloat(document.getElementById('analyzer-wbc').value);
+    const plt = parseFloat(document.getElementById('analyzer-plt').value);
+    const mcv = parseFloat(document.getElementById('analyzer-mcv').value);
+    
+    if (isNaN(hb) || isNaN(rbc) || isNaN(wbc) || isNaN(plt) || isNaN(mcv)) {
+        alert(lang === 'ar' ? 'يرجى إدخال جميع القيم بشكل صحيح.' : 'Please enter all values correctly.');
+        return;
+    }
+    
+    let resultsHTML = '';
+    let isAbnormal = false;
+    let diagnosisEn = [];
+    let diagnosisAr = [];
+    
+    function getStatus(val, min, max, labelEn, labelAr, unit) {
+        let status = 'normal';
+        let statusTextEn = 'Normal';
+        let statusTextAr = 'طبيعي';
+        let badgeClass = 'normal';
+        
+        if (val < min) {
+            status = 'low';
+            statusTextEn = 'Low';
+            statusTextAr = 'منخفض';
+            badgeClass = 'low';
+            isAbnormal = true;
+        } else if (val > max) {
+            status = 'high';
+            statusTextEn = 'High';
+            statusTextAr = 'مرتفع';
+            badgeClass = 'high';
+            isAbnormal = true;
+        }
+        
+        const currentStatusText = (lang === 'ar') ? statusTextAr : statusTextEn;
+        const nameText = (lang === 'ar') ? labelAr : labelEn;
+        
+        return {
+            status: status,
+            html: `<div class="cbc-result-item">
+                <span class="label">${nameText}</span>
+                <span>
+                    ${val} ${unit} &nbsp;
+                    <span class="cbc-badge ${badgeClass}">${currentStatusText}</span>
+                    <small style="color:var(--muted); margin-left: 8px;">(${min} - ${max})</small>
+                </span>
+            </div>`
+        };
+    }
+    
+    const hbMin = (gender === 'male') ? 13.5 : 12.0;
+    const hbMax = (gender === 'male') ? 17.5 : 15.5;
+    const rbcMin = (gender === 'male') ? 4.5 : 4.1;
+    const rbcMax = (gender === 'male') ? 5.9 : 5.1;
+    
+    const hbRes = getStatus(hb, hbMin, hbMax, 'Hemoglobin (Hb)', 'الهيموغلوبين (Hb)', (lang === 'ar' ? 'جم/ديسيلتر' : 'g/dL'));
+    const rbcRes = getStatus(rbc, rbcMin, rbcMax, 'Red Blood Cells (RBC)', 'عدد كريات الدم الحمراء (RBC)', (lang === 'ar' ? 'مليون/ميكرولتر' : 'M/µL'));
+    const wbcRes = getStatus(wbc, 4000, 11000, 'White Blood Cells (WBC)', 'عدد كريات الدم البيضاء (WBC)', (lang === 'ar' ? 'لكل ميكرولتر' : '/µL'));
+    const pltRes = getStatus(plt, 150000, 450000, 'Platelets (PLT)', 'عدد الصفائح الدموية (PLT)', (lang === 'ar' ? 'لكل ميكرولتر' : '/µL'));
+    const mcvRes = getStatus(mcv, 80, 100, 'MCV', 'متوسط حجم الكرية (MCV)', (lang === 'ar' ? 'فيمتولتر' : 'fL'));
+    
+    resultsHTML += hbRes.html + rbcRes.html + wbcRes.html + pltRes.html + mcvRes.html;
+    
+    if (hbRes.status === 'low') {
+        if (mcvRes.status === 'low') {
+            diagnosisEn.push("Microcytic Anemia (suggests Iron Deficiency Anemia)");
+            diagnosisAr.push("فقر الدم صغير الكريات (يرجح فقر دم بنقص الحديد)");
+        } else if (mcvRes.status === 'high') {
+            diagnosisEn.push("Macrocytic Anemia (suggests Vitamin B12 or Folate Deficiency)");
+            diagnosisAr.push("فقر الدم كبير الكريات (يرجح نقص فيتامين B12 أو الفولات)");
+        } else {
+            diagnosisEn.push("Normocytic Anemia (potential blood loss or chronic condition)");
+            diagnosisAr.push("فقر دم سوي الكريات (قد ينتج عن فقدان دم أو مرض مزمن)");
+        }
+    } else if (hbRes.status === 'high') {
+        diagnosisEn.push("Elevated Hemoglobin (Polycythemia / Dehydration)");
+        diagnosisAr.push("ارتفاع الهيموغلوبين (كثرة الحمر أو الجفاف)");
+    }
+    
+    if (wbcRes.status === 'high') {
+        diagnosisEn.push("Leukocytosis (indicates active infection or inflammation)");
+        diagnosisAr.push("ارتفاع خلايا الدم البيضاء (يدل على وجود عدوى أو التهاب)");
+    } else if (wbcRes.status === 'low') {
+        diagnosisEn.push("Leukopenia (weakened immune system)");
+        diagnosisAr.push("انخفاض خلايا الدم البيضاء (ضعف المناعة)");
+    }
+    
+    if (pltRes.status === 'low') {
+        diagnosisEn.push("Thrombocytopenia (increased bleeding risk)");
+        diagnosisAr.push("نقص الصفائح الدموية (زيادة خطر النزيف)");
+    } else if (pltRes.status === 'high') {
+        diagnosisEn.push("Thrombocytosis (increased clotting risk)");
+        diagnosisAr.push("ارتفاع الصفائح الدموية (زيادة خطر التخثر)");
+    }
+    
+    let summaryHTML = '';
+    if (!isAbnormal) {
+        const sumText = (lang === 'ar') ? 'جميع المؤشرات ضمن الحدود الطبيعية.' : 'All parameters are within normal limits.';
+        summaryHTML = `<div class="cbc-result-summary normal">${sumText}</div>`;
+    } else {
+        const sumTitle = (lang === 'ar') ? 'التفسير السريري المتوقع:' : 'Expected Clinical Interpretation:';
+        const diagnoses = (lang === 'ar') ? diagnosisAr : diagnosisEn;
+        summaryHTML = `<div class="cbc-result-summary abnormal">
+            <div style="margin-bottom: 8px;">${sumTitle}</div>
+            <ul style="list-style: none; padding: 0; font-weight: normal; font-size: 14px;">
+                ${diagnoses.map(d => `<li style="margin: 4px 0;">• ${d}</li>`).join('')}
+            </ul>
+        </div>`;
+    }
+    
+    document.getElementById('cbc-results-items').innerHTML = resultsHTML;
+    document.getElementById('cbc-results-summary').innerHTML = summaryHTML;
+    document.getElementById('cbc-results-panel').classList.add('active');
+}
+
 const btn = document.getElementById("langSwitch");
 let lang = localStorage.getItem("lang") || "en";
 
@@ -1673,9 +2302,6 @@ function applyLang(l){
             el.innerHTML = el.getAttribute("data-" + l);
         });
 
-        // Hide Arabic supplementary blocks in Arabic mode (since content is translated inline now)
-        // Wait, if content is Arabic, the inline text is Arabic. Should we hide or show the block?
-        // Let's just keep the original behavior: in Arabic, hide it.
         document.querySelectorAll('.arabic-block').forEach(function(el){
             el.style.display = (l === 'ar') ? 'none' : 'block';
         });
@@ -1692,6 +2318,12 @@ function applyLang(l){
         if(btn) btn.innerText = (l === "ar") ? "EN" : "AR";
 
         localStorage.setItem("lang", l);
+        
+        // Re-run CBC analyzer if active to refresh language translations
+        const resultsPanel = document.getElementById('cbc-results-panel');
+        if (resultsPanel && resultsPanel.classList.contains('active')) {
+            runCbcAnalysis();
+        }
 
         document.body.classList.remove("fade");
     }, 200);
