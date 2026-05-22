@@ -1,0 +1,37 @@
+{
+  "currentUserLogin": "znarfaiz7-oss",
+  "threadUrl": "https://github.com/copilot/c/c40288eb-001c-4262-a45b-739c4a2de480",
+  "threadName": "Adding changes to website repository",
+  "messages": [
+    {
+      "id": "root",
+      "role": "user",
+      "createdAt": "",
+      "threadID": "",
+      "references": null
+    },
+    {
+      "id": "99dbc848-844b-4ece-ad3b-8d0a28037284",
+      "parentMessageID": "root",
+      "role": "user",
+      "content": "Add all change in website ",
+      "createdAt": "2026-05-22T15:00:51.215Z",
+      "threadID": "c40288eb-001c-4262-a45b-739c4a2de480",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "8aa9d616-ad15-427c-8bd0-9720bbc06acc",
+      "parentMessageID": "99dbc848-844b-4ece-ad3b-8d0a28037284",
+      "intent": "conversation",
+      "role": "assistant",
+      "model": "",
+      "content": "Could you please clarify what you mean by “Add all change in website”? Are you asking to:\n\n- List all the recent changes made to your website repository?\n- Add (stage/commit) all changed files in your website’s codebase?\n- Create a summary of changes for a website update or release note?\n- Something else (e.g., making new changes, deploying, or merging)?\n\nPlease specify the repository name and what exactly you’d like to do. If you want to add all current changes in a GitHub repository, please provide the repo details and any specific instructions for the commit message or branch name.",
+      "createdAt": "2026-05-22T15:00:56.184571113Z",
+      "threadID": "c40288eb-001c-4262-a45b-739c4a2de480",
+      "references": [],
+      "skillExecutions": []
+    }
+  ],
+  "files": {}
+}
